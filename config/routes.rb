@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+  root to: "songs#index"
+
+  devise_for :users, :controllers => {:registrations => "registrations", :sessions => "sessions"}
   resources :songs
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
